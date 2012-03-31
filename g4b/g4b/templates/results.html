@@ -1,0 +1,11 @@
+<dl>
+{% for result in data.responseData.results %}
+    <dt><a href="{{ result.url }}">{{ result.title|safe }}</a></dt>
+    <dd>
+        <em>{{ result.visibleUrl }}</em>
+        <p>{{ result.content|safe }}</p>
+    </dd>
+{% endfor %}
+</dl>
+
+<em>Results from <a href="http://www.google.com/">Google</a></em>
