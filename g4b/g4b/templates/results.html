@@ -4,6 +4,10 @@
   <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
   <title>Googling "{{ form.cleaned_data.q }}" for Bulat</title>
 
+<form action="{% url home %}" method="GET">
+    {{ form.as_p }}
+</form>
+
 <dl>
 {% for result in data.responseData.results %}
     <dt><a href="{{ result.url }}">{{ result.title|safe }}</a></dt>
