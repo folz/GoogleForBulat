@@ -31,6 +31,4 @@ def results(req, form):
     
     data = json.loads(raw_data)
     
-    return render(req, "results.html", {
-        "data" : data,
-    })
+    return render(req, "results.html", locals())
